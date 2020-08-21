@@ -32,5 +32,5 @@ const Section = ({ title, color, description }) => {
   )
 }
 
-export default Section
+export default Section;
 
