@@ -9,6 +9,10 @@ export default function App() {
 
   const [isActive, setIsActive] = useState(false);
 
+  //TODO: 750px
+  //TODO: 1000px
+  //TODO: Resto
+
   return (
     <>
       {

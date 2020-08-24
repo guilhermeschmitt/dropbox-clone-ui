@@ -4,7 +4,11 @@ import {
   Content,
   HeaderWrapper,
   Header,
-  DropboxLogo
+  LogoContainer,
+  NavContainer,
+  NavActions,
+  DropboxLogo,
+  HeaderNav
 } from './styles';
 
 const Section = ({ title, color, description }) => {
@@ -12,15 +16,21 @@ const Section = ({ title, color, description }) => {
     <Container className={color}>
       <HeaderWrapper>
         <Header>
-          <h1>
-            <DropboxLogo />
-            <span>
-              Dropbox
-            </span>
-          </h1>
-          <button>
-            Acessar
-          </button>
+          <HeaderNav>
+            <LogoContainer>
+              <DropboxLogo />
+            </LogoContainer>
+            <NavContainer>
+              <NavActions>
+                <button>
+                  Acessar
+                </button>
+                <button>
+                  Menu
+                </button>
+              </NavActions>
+            </NavContainer>
+          </HeaderNav>
         </Header>
       </HeaderWrapper>
 
