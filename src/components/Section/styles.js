@@ -42,31 +42,6 @@ export const Container = styled.div`
   position: relative;
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const HeaderWrapper = styled.div`
   position: absolute;
   top: 0;
@@ -89,6 +64,10 @@ export const Header = styled.header`
   position: fixed;
   justify-content: center;
   background: var(--bg-color);
+
+  @media (min-width: 750px) {
+    height: 90px;
+  }
 `;
 
 export const HeaderNav = styled.nav`
@@ -103,30 +82,51 @@ export const HeaderNav = styled.nav`
   justify-content: flex-start;
   padding-left: calc(767px * (1 / 24));
   padding-right: calc(767px * (1 / 24));
+
+  @media (min-width: 750px) {
+    padding-left: calc(1023px * (2 / 24));
+    padding-right: calc(1023px * (2 / 24));
+  }
+
+  @media (min-width: 1000px) {
+    padding-left: calc(1440px * (1 / 24));
+    padding-right: calc(1440px * (1 / 24));
+  }
 `;
 
 export const LogoContainer = styled.div`
-  width: 36px;
-  min-width: 36px;
+  display: flex;
   margin-right: 30px;
+  align-items: center;
+
+  > .logo-name {
+    font-size: 29px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  @media (max-width: 750px) {
+    > .logo-name {
+      display: none;
+    }
+  }
 `;
 
 export const NavContainer = styled.div`
-  color: var(--text-color);
   width: auto;
   flex-grow: 1;
   display: flex;
   flex-basis: auto;
   align-items: center;
+  color: var(--text-color);
   justify-content: flex-start;
 `;
 
 export const NavActions = styled.section`
   display: flex;
-  margin-left: auto;
   flex-direction: row;
 
-  > button {
+  > button, span {
     border: none;
     outline: none;
     margin-left: 0;
@@ -134,12 +134,35 @@ export const NavActions = styled.section`
     cursor: pointer;
     margin-right: 0; 
     background: none;
+    font-weigth: bold;
     padding: 10px 15px;
     line-height: 1.625em;
     color: var(--text-color);
 
     &:hover, &:focus {
       text-decoration: underline;
+    }
+  }
+
+  &:first-child {
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: auto;
+  }
+
+  @media(min-width: 1000px) {
+    > .menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    > .register {
+      display: none;
     }
   }
 `;
@@ -150,27 +173,6 @@ export const DropboxLogo = styled(FaDropbox)`
   margin-right: 6px;
   fill: var(--logo-color);
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const Content = styled.div`
   z-index: 2;

@@ -19,13 +19,27 @@ const Section = ({ title, color, description }) => {
           <HeaderNav>
             <LogoContainer>
               <DropboxLogo />
+              <span className='logo-name'>
+                Dropbox
+              </span>
             </LogoContainer>
             <NavContainer>
+              <NavActions>
+                <span>
+                  Para equipes
+                </span>
+                <span>
+                  Para pessoas físicas
+                </span>
+              </NavActions>
               <NavActions>
                 <button>
                   Acessar
                 </button>
-                <button>
+                <button className='register'>
+                  Registrar-se
+                </button>
+                <button className='menu'>
                   Menu
                 </button>
               </NavActions>
